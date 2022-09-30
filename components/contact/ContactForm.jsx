@@ -1,9 +1,25 @@
-import React from "react";
+import React, { useRef,useState } from 'react';
+import emailjs from '@emailjs/browser';
 import Link from "next/link";
 
+
 const ContactForm = () => {
+
+  const [submit,setSubmit] = useState(0);
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+  
+    emailjs.sendForm('service_65cvvuq', 'template_bd4vyad', form.current, 'Ws5qwtrmWHERMQYKH')
+      .then((result) => {
+          setSubmit(1);
+      }, (error) => {
+          console.log(error.text);
+      });
+  };
   return (
-    <form id="contact-form" method="post" >
+    <form ref={form} onSubmit={sendEmail} enctype="multipart/form-data" method="post" >
       <div className="flex space-x-7">
         <div className="mb-6 w-1/2 ">
           <label className="font-display text-jacarta-700 mb-1 block text-sm dark:text-white">
@@ -64,9 +80,9 @@ const ContactForm = () => {
             Subject<span className="text-red">*</span>
           </label>
           <input
-            name="name"
+            name="subject"
             className="contact-form-input dark:bg-jacarta-700 border-jacarta-100 hover:ring-accent/10 focus:ring-accent dark:border-jacarta-600 dark:placeholder:text-jacarta-300 w-full rounded-lg py-3 hover:ring-2 dark:text-white"
-            id="name"
+            id="subject"
             type="text"
             required
           />
@@ -85,6 +101,8 @@ const ContactForm = () => {
           rows="5"
         ></textarea>
       </div>
+      
+    
 
       <div className="mb-6 flex items-center space-x-2">
         <input
@@ -101,18 +119,19 @@ const ContactForm = () => {
         </label>
       </div>
 
-      <button
+     { submit == 1 ?<span className="bg-green   rounded-full py-3 px-8 text-center font-semibold text-white transition-all" >Submitted</span>:<button
+      
         type="submit"
         className="bg-accent shadow-accent-volume hover:bg-accent-dark rounded-full py-3 px-8 text-center font-semibold text-white transition-all"
         id="contact-form-submit"
       >
         Submit
-      </button>
+      </button>}
 
       <div
         id="contact-form-notice"
         className="relative mt-4 hidden rounded-lg border border-transparent p-4"
-      ></div>
+      >Submitted</div>
     </form>
   );
 };

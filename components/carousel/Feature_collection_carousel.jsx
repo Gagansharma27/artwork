@@ -30,8 +30,8 @@ const Feature_collections_carousel = () => {
             spaceBetween: 20,
           },
           1100: {
-            slidesPerView: 4,
-            spaceBetween: 30,
+            slidesPerView: 3,
+            spaceBetween: 100,
           },
         }}
         navigation={{
@@ -102,33 +102,13 @@ const Feature_collections_carousel = () => {
                           src={bigImage}
                           alt="item 1"
                           className="rounded-[0.625rem]"
-                          width={150}
-                          height={240}
+                          width={100}
+                          height={100}
                           objectFit="cover"
                           layout="responsive"
                         />
                       </figure>
-                      {/* <span className="flex w-1/3 flex-col space-y-[0.625rem]">
-												<img
-													src={subImage1}
-													alt="item 1"
-													className="h-full rounded-[0.625rem] object-cover"
-													loading="lazy"
-												/>
-
-												<img
-													src={subImage2}
-													alt="item 1"
-													className="h-full rounded-[0.625rem] object-cover"
-													loading="lazy"
-												/>
-												<img
-													src={subImage3}
-													alt="item 1"
-													className="h-full rounded-[0.625rem] object-cover"
-													loading="lazy"
-												/>
-											</span> */}
+                     
                     </a>
                   </Link>
                   <div className="container mt-4 flex justify-between">
