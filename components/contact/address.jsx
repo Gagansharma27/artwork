@@ -36,7 +36,7 @@ const Address = () => {
               Go to Frequently Asked Questions
             </span>
             <a
-              href=""
+              href="/about#faq"
               className="hover:text-accent dark:text-jacarta-300 text-sm"
             >
               Click here
@@ -65,7 +65,7 @@ const Address = () => {
               Community Help
             </span>
             <address className="dark:text-jacarta-300 text-sm not-italic">
-             Go to Discord
+              <a href="https://discord.gg">Go to Discord</a>
             </address>
           </div>
         </div>

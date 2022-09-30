@@ -32,7 +32,7 @@ const Works = () => {
             </h3>
           </div>
           {/* <!-- Featured Post --> */}
-          <article>
+          <article className="max-w-l">
             <div className="rounded-2xl flex flex-col overflow-hidden transition-shadow hover:shadow-lg md:flex-row md:items-center">
               {/* <!-- Body --> */}
               <div className="border-jacarta-100 rounded-b-[1.25rem]   md:w-1/2 md:rounded-none md:rounded-r-[1.25rem]">
@@ -57,7 +57,7 @@ const Works = () => {
               </figure>
             </div>
           </article>
-          <article >
+          <article className="max-w-l">
             <div className=" rounded-2xl flex flex-col overflow-hidden transition-shadow hover:shadow-lg md:flex-row md:items-center md:justify-evenly ">
               {/* <!-- Body --> */}
               <figure className="group overflow-hidden md:w-1/3 h-1/2">
@@ -83,7 +83,7 @@ const Works = () => {
               </div>
             </div>
           </article>
-          <article className="mb-[1.875rem]  ">
+          <article className="mb-[1.875rem] max-w-l">
             <div className="rounded-2xl flex flex-col overflow-hidden transition-shadow hover:shadow-lg md:flex-row  md:items-center">
               {/* <!-- Body --> */}
               <div className="border-jacarta-100 rounded-b-[1.25rem]  md:w-1/2 md:rounded-none md:rounded-r-[1.25rem]">

@@ -11,7 +11,7 @@ const Accordion = ({ data }) => {
     }
   };
   return (
-    <div className="container">
+    <div className="container" id="faq">
       <h2 className="font-display text-jacarta-700 mb-10 text-center text-xl font-medium dark:text-white">
         The most frequently asked questions
       </h2>
