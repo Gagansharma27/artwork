@@ -1,0 +1,85 @@
+import React, { useState } from "react";
+import Link from "next/link";
+
+const Accordion = ({ data }) => {
+  const [selected, setSelected] = useState(null);
+  const handleAccordion = (id) => {
+    if (selected === id) {
+      setSelected(null);
+    } else {
+      setSelected(id);
+    }
+  };
+  return (
+    <div className="container">
+      <h2 className="font-display text-jacarta-700 mb-10 text-center text-xl font-medium dark:text-white">
+        The most frequently asked questions
+      </h2>
+
+      <div className="accordion mx-auto " id="accordionFAQ">
+        {data.map((item) => {
+          const { id, title, text } = item;
+          return (
+            <div
+              key={id}
+              className="accordion-item dark:border-jacarta-600 border-jacarta-100 mb-5 overflow-hidden rounded-lg border"
+            >
+              <h2
+                className="accordion-header"
+                id="faq-heading-1"
+                onClick={() => handleAccordion(id)}
+              >
+                <button
+                  className={
+                    selected === id
+                      ? "accordion-button dark:bg-jacarta-700 font-display text-jacarta-700 relative flex w-full items-center justify-between bg-white px-4 py-3 text-left dark:text-white "
+                      : "accordion-button dark:bg-jacarta-700 font-display text-jacarta-700 collapsed relative flex w-full items-center justify-between bg-white px-4 py-3 text-left dark:text-white "
+                  }
+                  type="button"
+                >
+                  <span>{title}</span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    width="24"
+                    height="24"
+                    className="accordion-arrow fill-jacarta-700 h-4 w-4 shrink-0 transition-transform dark:fill-white"
+                  >
+                    <path fill="none" d="M0 0h24v24H0z"></path>
+                    <path d="M12 13.172l4.95-4.95 1.414 1.414L12 16 5.636 9.636 7.05 8.222z"></path>
+                  </svg>
+                </button>
+              </h2>
+              <div
+                id="faq-1"
+                className={
+                  selected === id
+                    ? "accordion-collapse collapse show "
+                    : "accordion-collapse collapse"
+                }
+                aria-labelledby="faq-heading-1"
+                data-bs-parent="#accordionFAQ"
+              >
+                <div className="accordion-body dark:bg-jacarta-700 dark:border-jacarta-600 border-jacarta-100 border-t bg-white p-4">
+                  <p className="dark:text-jacarta-200">{text}</p>
+                </div>
+              </div>
+            </div>
+          );
+        })}
+      </div>
+      <p className="text-jacarta-300 mx-auto mb-10 text-center text-lg">
+        You want to learn more about the ArtFactory721? There you can find more
+        information’s.
+        <br />
+        Was your question not answered? We are happy to be there for you.
+        <br />
+        <Link href="/contact">
+          <a className="text-accent">Contact Support</a>
+        </Link>
+      </p>
+    </div>
+  );
+};
+
+export default Accordion;
