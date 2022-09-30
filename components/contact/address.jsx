@@ -32,14 +32,13 @@ const Address = () => {
           </span>
 
           <div>
-            <span className="font-display text-jacarta-700 block text-base dark:text-white">
-              Go to Frequently Asked Questions
-            </span>
-            <a
-              href="/about#faq"
-              className="hover:text-accent dark:text-jacarta-300 text-sm"
-            >
-              Click here
+            <a href="/about#faq">
+              <span className="font-display text-jacarta-700 block text-base dark:text-white">
+                Go to Frequently Asked Questions
+              </span>
+              <span className="hover:text-accent dark:text-jacarta-300 text-sm">
+                Click here
+              </span>
             </a>
           </div>
         </div>
@@ -61,12 +60,14 @@ const Address = () => {
           </span>
 
           <div>
-            <span className="font-display text-jacarta-700 block text-base dark:text-white">
-              Community Help
-            </span>
-            <address className="dark:text-jacarta-300 text-sm not-italic">
-              <a href="https://discord.gg">Go to Discord</a>
-            </address>
+            <a href="https://discord.gg">
+              <span className="font-display text-jacarta-700 block text-base dark:text-white">
+                Community Help
+              </span>
+              <address className="dark:text-jacarta-300 text-sm not-italic">
+                Go to Discord
+              </address>
+            </a>
           </div>
         </div>
 
@@ -88,14 +89,13 @@ const Address = () => {
           </span>
 
           <div>
-            <span className="font-display text-jacarta-700 block text-base dark:text-white">
-              Email
-            </span>
-            <a
-              href="mailto:info@artFactory721.com"
-              className="hover:text-accent dark:text-jacarta-300 text-sm not-italic"
-            >
-              info@artfactory721.com
+            <a href="mailto:info@artFactory721.com">
+              <span className="font-display text-jacarta-700 block text-base dark:text-white">
+                Email
+              </span>
+              <span className="hover:text-accent dark:text-jacarta-300 text-sm not-italic">
+                info@artfactory721.com
+              </span>
             </a>
           </div>
         </div>

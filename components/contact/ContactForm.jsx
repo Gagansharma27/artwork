@@ -87,6 +87,21 @@ const ContactForm = () => {
         ></textarea>
       </div>
 
+      <div className="flex ">
+        <div className="mb-6 w-full">
+          <label className="font-display text-jacarta-700 mb-1 block text-sm dark:text-white">
+            Attach your work<span className="text-red">*</span>
+          </label>
+          <input
+            name="attachment"
+            className="contact-form-input dark:bg-jacarta-700 border-jacarta-100 hover:ring-accent/10 focus:ring-accent dark:border-jacarta-600 dark:placeholder:text-jacarta-300 w-full rounded-lg py-3 hover:ring-2 dark:text-white form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+            id="attachment"
+            type="file"
+            multiple
+            required
+          />
+        </div>
+      </div>
       <div className="mb-6 flex items-center space-x-2">
         <input
           type="checkbox"

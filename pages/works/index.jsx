@@ -163,9 +163,11 @@ const Works = () => {
             More information about royalty and process will follow here.
           </h3>
           <div className="text-center">
-            <button className="bg-accent shadow-accent-volume hover:bg-accent-dark rounded-full py-3 px-8 text-center font-semibold text-white transition-all">
-              Submit Work
-            </button>
+            <Link href="/contact">
+              <button className="bg-accent shadow-accent-volume hover:bg-accent-dark rounded-full py-3 px-8 text-center font-semibold text-white transition-all">
+                Submit Work
+              </button>
+            </Link>
           </div>
         </div>
       </section>
